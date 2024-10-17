@@ -28,7 +28,7 @@ body {
 
 .cabecalho__menu {
     display: flex;
-    gap: 80px;
+    gap: 40px;
 }
 
 .cabecalho__menu__link {
@@ -67,6 +67,7 @@ body {
     font-size: 2.25rem;
     font-weight: 400;
     font-style: normal;
+    align-self: center;
 }
 
 .apresentacao__conteudo__titulo-destaque {
@@ -126,6 +127,46 @@ body {
     font-weight: 600;
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-text {
+    font-size: 1.9rem;
+    background: linear-gradient(-45deg, #1A6DFF, #C822FF, #6DC7FF, #E6ABFF);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    background-clip: text;
+    color: transparent;
+}
+
 @media(max-width: 1200px) {
     .cabecalho {
         padding: 5%;
@@ -162,4 +203,109 @@ body {
     .rodape {
         text-align: center;
     }
+
+    .gradient-text-space-gallery {
+        font-size: 1.9rem;
+    }
+
+    .gradient-text-tarefacil {
+        font-size: 1.9rem;
+    }
+
+    .gradient-text-xadrez {
+        font-size: 1.9rem;
+    }
+}
+
+/* Container dos Projetos */
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+article {
+    flex: 1 1 calc(50% - 16px);
+}
+
+article {
+    --img-scale: 1.001;
+    --title-color: black;
+    --link-icon-translate: -20px;
+    --link-icon-opacity: 0;
+    position: relative;
+    border-radius: 16px;
+    box-shadow: none;
+    background-color: var(--cor-hover);
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+article a::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+}
+
+/* basic article elements styling */
+article h2 {
+    margin: 0 0 18px 0;
+    font-family: "Krona One", sans-serif;
+    font-size: 1.9rem;
+    letter-spacing: 0.06em;
+    color: var(--title-color);
+    transition: color 0.3s ease-out;
+    color: var(--cor-terciaria);
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+article img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+}
+
+.article-body {
+    padding: 24px;
+}
+
+article a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-terciaria);
+}
+
+article a:focus {
+    outline: 1px dotted #28666e;
+}
+
+article a .icon {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    transform: translateX(var(--link-icon-translate));
+    opacity: var(--link-icon-opacity);
+    transition: all 0.3s;
+}
+
+/* using the has() relational pseudo selector to update our custom properties */
+article:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: #28666e;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }

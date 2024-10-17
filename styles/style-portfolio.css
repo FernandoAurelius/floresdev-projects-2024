@@ -4,7 +4,7 @@
     --cor-primaria: #D2E0FB;
     --cor-secundaria: #FEF9D9;
     --cor-terciaria: #DEE5D4;
-    --cor-hover: #8EACCD;
+    --cor-hover: #377cc5;
 
     --fonte-principal: 'Krona One', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
@@ -49,6 +49,10 @@ body {
     background-image: url('../assets/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg');
     background-size: cover;
     background-position: center;
+}
+
+.apresentacao-sites {
+    background-image: url('../assets/jefferson-santos-9SoCnyQmkzI-unsplash.jpg');
 }
 
 .apresentacao__conteudo {

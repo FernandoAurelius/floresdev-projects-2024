@@ -167,6 +167,30 @@ body {
     color: transparent;
 }
 
+.gradient-text-tarefacil {
+    font-size: 1.9rem;
+    background: linear-gradient(-45deg, #365E32, #81A263, #E7D37F, #FD9B63);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    background-clip: text;
+    color: transparent;
+}
+
+.gradient-text-fipe {
+    font-size: 1.9rem;
+    background: linear-gradient(-45deg, #26355D, #AF47D2, #FF8F00, #FFDB00);
+    background-size: 200% 200%;
+    animation: gradient 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    background-clip: text;
+    color: transparent;
+}
+
 @media(max-width: 1200px) {
     .cabecalho {
         padding: 5%;

@@ -205,6 +205,7 @@ body {
 
     .cabecalho__menu {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .apresentacao {
@@ -253,6 +254,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    width: 80%;
 }
 
 article {
